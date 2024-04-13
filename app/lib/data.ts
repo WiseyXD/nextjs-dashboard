@@ -38,6 +38,10 @@ export async function fetchLatestInvoices() {
   noStore();
 
   try {
+    console.log('Wait for 5 seconds');
+
+    await new Promise((r) => setTimeout(r, 5000));
+
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
       FROM invoices

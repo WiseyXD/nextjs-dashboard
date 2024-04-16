@@ -47,6 +47,8 @@ export default function Page() {
           />
         </div>
       </div>
+      {/* Streaming Done
+       */}
     </main>
   );
 }
